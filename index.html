@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котостудия — Тематические съемки</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand logo-text" href="#">Котостудия</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Записаться</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="py-5 text-center bg-light">
+        <div class="container">
+            <h1 class="display-4 mb-4">Мы фотографируем котиков</h1>
+            <p class="lead">Добро пожаловать в «Котостудию» — пространство, где пушистики становятся моделями! Мы знаем, как поймать идеальный "кусь" в кадре.</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Галерея</h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-wrapper shadow-sm">
+                        <img src="https://placecats.com/500/500" alt="Кот 1" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-wrapper shadow-sm">
+                        <img src="https://placecats.com/501/501" alt="Кот 2" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="img-wrapper shadow-sm">
+                        <img src="https://placecats.com/502/502" alt="Кот 3" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-pink-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Записаться на фотосессию</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="userName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userEmail" required placeholder="example@mail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="catName" class="form-label">Имя котика</label>
+                            <input type="text" class="form-control" id="catName" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Записаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark text-white text-center">
+        <p class="mb-0">© 2025 Котостудия. Мурлычем с любовью 🐾</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+</html>
